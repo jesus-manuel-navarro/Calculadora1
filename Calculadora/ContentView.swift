@@ -21,8 +21,10 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ExtractedView: View {
+    @State var inputText: String = ""
     var body: some View {
         VStack{
+            TextField("0", text: $inputText)
             HStack{
                 Button(action: {
                     print("1")
