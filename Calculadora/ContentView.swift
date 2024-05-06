@@ -30,19 +30,21 @@ struct ExtractedView: View {
                     Text("1")
                 }
                 )
-               // fin de boton
+                .buttonStyle(BlueButton())// fin de boton// fin de boton
                 Button(action: {
                     print("2")
                 }, label: {
                     Text("2")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton// fin de boton
                 Button(action: {
                     print("3")
                 }, label: {
                     Text("3")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
             }
             HStack{
                 Button(action: {
@@ -50,19 +52,22 @@ struct ExtractedView: View {
                 }, label: {
                     Text("4")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
                     print("5")
                 }, label: {
                     Text("5")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
                     print("7")
                 }, label: {
                     Text("7")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton fin de boton
             }
             HStack{
                 Button(action: {
@@ -70,24 +75,27 @@ struct ExtractedView: View {
                 }, label: {
                     Text("8")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
                     print("9")
                 }, label: {
                     Text("9")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
                     print("0")
                 }, label: {
                     Text("0")
                 }
-                )  // fin de boton
+                )
+                .buttonStyle(BlueButton())// fin de boton
             }
         }
     }
 }
-/*
+
  struct BlueButton: ButtonStyle {
      func makeBody(configuration: Configuration) -> some View {
          configuration.label
@@ -97,7 +105,7 @@ struct ExtractedView: View {
              .clipShape(Capsule())
      }
  }
-
+/*
  struct ContentView: View {
      var body: some View {
          Button("Press Me") {
