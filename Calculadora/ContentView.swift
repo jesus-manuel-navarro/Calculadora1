@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var inputText : String = " "
-    
+    @State var inputText : String = "0"
+    @State var isEditable : Bool = false
     var body: some View {
         
         VStack {
             TextField("0", text: $inputText)
                 .keyboardType(.numberPad)
-                .padding()
+                .disabled(!isEditable)                .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.trailing) // Alineación desde la derecha
             ExtractedView(inputText: $inputText)
