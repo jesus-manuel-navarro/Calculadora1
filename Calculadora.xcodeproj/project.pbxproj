@@ -14,6 +14,7 @@
 		EA61D2C42BE92575005DE219 /* CalculadoraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61D2C32BE92575005DE219 /* CalculadoraTests.swift */; };
 		EA61D2CE2BE92576005DE219 /* CalculadoraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61D2CD2BE92576005DE219 /* CalculadoraUITests.swift */; };
 		EA61D2D02BE92576005DE219 /* CalculadoraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61D2CF2BE92576005DE219 /* CalculadoraUITestsLaunchTests.swift */; };
+		EA8CAA862BF24DC5008804E1 /* modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CAA852BF24DC5008804E1 /* modal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		EA61D2C92BE92576005DE219 /* CalculadoraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculadoraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA61D2CD2BE92576005DE219 /* CalculadoraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraUITests.swift; sourceTree = "<group>"; };
 		EA61D2CF2BE92576005DE219 /* CalculadoraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA8CAA852BF24DC5008804E1 /* modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				EA61D2B42BE9256F005DE219 /* ContentView.swift */,
 				EA61D2B62BE92574005DE219 /* Assets.xcassets */,
 				EA61D2B82BE92574005DE219 /* Preview Content */,
+				EA8CAA852BF24DC5008804E1 /* modal.swift */,
 			);
 			path = Calculadora;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA61D2B52BE9256F005DE219 /* ContentView.swift in Sources */,
+				EA8CAA862BF24DC5008804E1 /* modal.swift in Sources */,
 				EA61D2B32BE9256F005DE219 /* CalculadoraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

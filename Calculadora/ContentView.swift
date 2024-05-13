@@ -9,32 +9,44 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var inputText : String = " "
+    
     var body: some View {
+        
         VStack {
-            ExtractedView()
+            TextField("0", text: $inputText)
+                .keyboardType(.numberPad)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .multilineTextAlignment(.trailing) // Alineación desde la derecha
+            ExtractedView(inputText: $inputText)
         }
-    }}
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+         ContentView()
     }
 }
 
 struct ExtractedView: View {
-    @State var inputText: String = ""
+    
+    @Binding var inputText : String
+    
     var body: some View {
         VStack{
-            TextField("0", text: $inputText)
+           
             HStack{
                 Button(action: {
-                    print("1")
+                    inputText = inputText + "1"
                 }, label: {
+                    
                     Text("1")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton// fin de boton
                 Button(action: {
-                    print("2")
+                    inputText = inputText + "2"
                 }, label: {
                     Text("2")
                 }
