@@ -35,7 +35,7 @@ struct ExtractedView: View {
     
     var body: some View {
         VStack{
-           
+            
             HStack{
                 Button(action: {
                     inputText = inputText + "1"
@@ -53,63 +53,113 @@ struct ExtractedView: View {
                 )
                 .buttonStyle(BlueButton())// fin de boton// fin de boton
                 Button(action: {
-                    print("3")
+                    inputText = inputText + "3"
                 }, label: {
                     Text("3")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
+                Button(action: {
+                    
+                }, label: {
+                    Text("/")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton
             }
             HStack{
                 Button(action: {
-                    print("4")
+                    inputText = inputText + "4"
                 }, label: {
                     Text("4")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    print("5")
+                    inputText = inputText + "5"
                 }, label: {
                     Text("5")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    print("7")
+                    inputText = inputText + "6"
+                }, label: {
+                    Text("6")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton fin de boton
+                Button(action: {
+                    
+                }, label: {
+                    Text("-")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton
+            }
+            HStack{
+                Button(action: {
+                    inputText = inputText + "7"
                 }, label: {
                     Text("7")
                 }
                 )
-                .buttonStyle(BlueButton())// fin de boton fin de boton
-            }
-            HStack{
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    print("8")
+                    inputText = inputText + "8"
                 }, label: {
                     Text("8")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    print("9")
+                    inputText = inputText + "9"
                 }, label: {
                     Text("9")
                 }
                 )
-                .buttonStyle(BlueButton())// fin de boton/ fin de boton
+                .buttonStyle(BlueButton())// fin de boton
                 Button(action: {
-                    print("0")
+                    
                 }, label: {
-                    Text("0")
+                    Text("+")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton
             }
+            HStack{
+                Button(action: {
+                    
+                }, label: {
+                    Text("*")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
+                Button(action: {
+                    inputText = inputText + "0"
+                }, label: {
+                    Text("0")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton/ fin de boton
+                Button(action: {
+                    
+                }, label: {
+                    Text("#")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton
+                Button(action: {
+                    
+                }, label: {
+                    Text("=")
+                }
+                )
+                .buttonStyle(BlueButton())// fin de boton            }
+            }
         }
     }
 }
-
  struct BlueButton: ButtonStyle {
      func makeBody(configuration: Configuration) -> some View {
          configuration.label
