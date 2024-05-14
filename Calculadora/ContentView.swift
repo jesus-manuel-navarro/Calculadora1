@@ -31,7 +31,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ExtractedView: View {
-    
+    @StateObject var resultado = Calculos()
     @Binding var inputText : String
     
     var body: some View {
