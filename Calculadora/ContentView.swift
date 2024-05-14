@@ -16,7 +16,8 @@ struct ContentView: View {
         VStack {
             TextField("0", text: $inputText)
                 .keyboardType(.numberPad)
-                .disabled(!isEditable)                .padding()
+                .disabled(!isEditable)
+                .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.trailing) // Alineación desde la derecha
             ExtractedView(inputText: $inputText)
@@ -38,7 +39,9 @@ struct ExtractedView: View {
             
             HStack{
                 Button(action: {
-                    inputText = inputText + "1"
+                    if (inputText == "0"){inputText = "1"}
+                        else
+                    {inputText = inputText + "1"}
                 }, label: {
                     
                     Text("1")
@@ -46,14 +49,18 @@ struct ExtractedView: View {
                 )
                 .buttonStyle(BlueButton())// fin de boton// fin de boton
                 Button(action: {
-                    inputText = inputText + "2"
+                    if (inputText == "0"){inputText = "2"}
+                        else
+                    {inputText = inputText + "2"}
                 }, label: {
                     Text("2")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton// fin de boton
                 Button(action: {
-                    inputText = inputText + "3"
+                    if (inputText == "0"){inputText = "3"}
+                        else
+                    {inputText = inputText + "3"}
                 }, label: {
                     Text("3")
                 }
@@ -69,21 +76,27 @@ struct ExtractedView: View {
             }
             HStack{
                 Button(action: {
-                    inputText = inputText + "4"
+                    if (inputText == "0"){inputText = "4"}
+                        else
+                    {inputText = inputText + "4"}
                 }, label: {
                     Text("4")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    inputText = inputText + "5"
+                    if (inputText == "0"){inputText = "5"}
+                        else
+                    {inputText = inputText + "5"}
                 }, label: {
                     Text("5")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    inputText = inputText + "6"
+                    if (inputText == "0"){inputText = "6"}
+                        else
+                    {inputText = inputText + "6"}
                 }, label: {
                     Text("6")
                 }
@@ -99,21 +112,27 @@ struct ExtractedView: View {
             }
             HStack{
                 Button(action: {
-                    inputText = inputText + "7"
+                    if (inputText == "0"){inputText = "7"}
+                        else
+                    {inputText = inputText + "7"}
                 }, label: {
                     Text("7")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    inputText = inputText + "8"
+                    if (inputText == "0"){inputText = "8"}
+                        else
+                    {inputText = inputText + "8"}
                 }, label: {
                     Text("8")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    inputText = inputText + "9"
+                    if (inputText == "0"){inputText = "9"}
+                        else
+                    {inputText = inputText + "9"}
                 }, label: {
                     Text("9")
                 }
@@ -136,16 +155,18 @@ struct ExtractedView: View {
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    inputText = inputText + "0"
+                    if (inputText == "0"){inputText = "0"}
+                        else
+                    {inputText = inputText + "0"}
                 }, label: {
                     Text("0")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton/ fin de boton
                 Button(action: {
-                    
+                    inputText = "0"
                 }, label: {
-                    Text("#")
+                    Text("C")
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton
