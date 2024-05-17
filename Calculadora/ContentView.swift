@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State var inputText : String = "0"
     @State var isEditable : Bool = false
+    
     var body: some View {
         
         VStack {
@@ -31,8 +32,9 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ExtractedView: View {
-    @StateObject var resultado = Calculos()
     @Binding var inputText : String
+    @State var num1 : String = ""
+   @State var num2 : String = ""
     
     var body: some View {
         VStack{
@@ -102,8 +104,14 @@ struct ExtractedView: View {
                 }
                 )
                 .buttonStyle(BlueButton())// fin de boton fin de boton
+                
                 Button(action: {
-                    
+                    if (num1=="0"){
+                    num1 = inputText
+                        inputText = "0"}else{
+                            calcular(num1:String,num2:String)
+                            
+                        }
                 }, label: {
                     Text("-")
                 }
@@ -144,7 +152,7 @@ struct ExtractedView: View {
                     Text("+")
                 }
                 )
-                .buttonStyle(BlueButton())// fin de boton
+                .buttonStyle(BlueButton())// fin de boto
             }
             HStack{
                 Button(action: {
@@ -176,8 +184,10 @@ struct ExtractedView: View {
                     Text("=")
                 }
                 )
-                .buttonStyle(BlueButton())// fin de boton            }
+                .buttonStyle(BlueButton())// fin de boton
+                
             }
+            
         }
     }
 }
@@ -190,6 +200,13 @@ struct ExtractedView: View {
              .clipShape(Capsule())
      }
  }
+
+func calcular(num1:String, num2:String){
+    
+    var num1 = Float(num1)
+    var num2 = Float(num2)
+    
+}
 /*
  struct ContentView: View {
      var body: some View {
